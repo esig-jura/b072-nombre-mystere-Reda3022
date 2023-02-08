@@ -66,7 +66,7 @@ do {
     nbEssai++;
 } while (reponse !== nbMistere);
 
-alert('vous avez trouvé le bon numero apres '+ nbEssai + ' essai ');
+alert(' vous avez trouvé le bon numero apres '+ nbEssai + ' essai ');
 
 
 
