@@ -6,16 +6,6 @@
  */
 
 'use strict';
-// TODO afficher les messages d'erreur en HTML et pas avec alert
-// TODO panneau de config pour modifer MIN et MAX
-
-
-
-
-
-
-
-
 
 /**
  * Fonction qui retourne un nombre aléatoire compris entre min et max
@@ -27,32 +17,31 @@ function tireNombre(min, max) {
 
     return Math.floor(Math.random() * (max - min) + min);
 }
+// TODO Attention jamais plus de 2 lignes vides à la suite
 
 
-const mini=1;
-const maxi=100;
+const mini = 1; // TODO Nom des constantes de valeur en majuscule mini => MINI.
+const maxi = 100; // TODO Ajouter des espaces avant et après le signe =
 
 let nbEssai=1;
-
-let stop=true;
-
-let nbMistere=tireNombre(mini,maxi);
-
+let stop=true; // TODO Supprimer
+let nbMistere = tireNombre(mini, maxi);
+// TODO Déclarer réponse et mettre à null
 // juste pour voir cest quoi le numero secret
 alert(nbMistere);
 
-while (stop){
+while (stop){ // TODO do..while
 
     let reponse= Number(prompt('entrer un nombre entre 1 et 100 :'));
 
     if (reponse<nbMistere){
 
         alert('plus petit');
-    }else if (reponse>nbMistere){
+    } else if (reponse > nbMistere){
 
         alert('plus grand');
 
-    }else{
+    } else {
 
         alert('vous avez trouvé le bon numero apres '+nbEssai +' essai ');
         stop=false;
@@ -60,8 +49,6 @@ while (stop){
     }
 
     nbEssai++;
-
-
 }
 
 
